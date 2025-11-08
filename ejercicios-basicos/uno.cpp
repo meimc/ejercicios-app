@@ -1,73 +1,90 @@
-// 1. Declara una variable de tipo int llamada edad y asígnale tu edad.
-// 2. Declara una variable de tipo float llamada precio y asígnale el valor 17.99.
-// 3. Declara una variable de tipo char llamada genero y asígnale la letra ‘F’.
-// 4. Declara una variable de tipo double llamada distancia y asígnale el valor 12345.6789
-// 5. Declara una variable de tipo bool llamada esGraduado y asígnale false.
-// 6. Crea un programa que multiplique una variable float por una variable double y muestra el resultado.
-// 7. Crea un programa que cambien el valor de una variable bool y muestra el nuevo valor.
-// 8. Crea un programa que concatene dos variables char y muestre el resultado.
-// 9. Crea un programa que compare dos variables int y muestre cuál es la mayor.
-// 10. Intenta asignar un valor fuera del rango permitido para una variable int y observa qué sucede.
+// Declara una variable de tipo int llamada edad y asignale tu edad.
+// Declara una variable de tipo float llamada precio y asignale el valor 17.99.
+// Declara una variable de tipo char llamada genero y asignale la letra F.
+// Declara una variable de tipo double llamada distancia y asignale el valor 12345.6789.
+// Declara una variable de tipo bool llamado esGraduado y asignale false.
+// Crea un programa que multiplique una variable float por una variable double y miestra el resultado.
+// Crea un programa que cambie el valor de una variable bool y muestra el nuevo valor.
+// Crea un programa que concatene dos variables char y muestre el resultado
+// Crea un programa que compare dos variables int y muestre cuál es mayor.
+// Intenta asignar un valor fuera del rango permitido para una variable int y observa qué sucede.
 
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main() {
+    SetConsoleOutputCP(65001);
 
-    // Ejercicio 1
+    // ejercicio 1
     int edad = 32;
-    cout<<"1. Edad: "<<edad<<endl;
+    cout << "Tengo " << edad << " años" << endl;
 
-    // Ejercicio 2
+    // ejercicio 2
     float precio = 17.99;
-    cout<<"2. Precio: "<<precio<<endl;
+    cout << "El precio es " << precio << endl;
 
-    // Ejercicio 3
-    char genero = 'M'; // caracter
-    cout<<"3. Género: "<<genero<<endl;
+    // ejercicio 3
+    char genero = 'F';
+    cout << "El género es " << genero << endl;
 
-    // Ejercicio 4
+    // ejercicio 4
     double distancia = 12345.6789;
-    cout<<"4. Distancia: "<<distancia<<endl;
+    cout << "La distancia es " << distancia << endl;
 
-    // Ejercicio 5
-    bool esGraduado = false; // 0
-    cout<<"5. Es Graduado: "<<esGraduado<<endl;
+    // ejercicio 5
+    bool esGraduado = false;
+    cout << "Es graduado: " << esGraduado << endl;
 
-    // Ejercicio 6
-    float factor1 = 5.5f;
-    double factor2 = 2.3, resultado = 0.00;
-    resultado = factor1 * factor2;
-    cout<<"6. Resultado de multiplicación: "<<resultado<<endl;
+    // ejercicio 6
+    float numFloat = 0.00f;
+    double numDouble = 0.00, resultadoMultiplicacion = 0.00;
+    cout << "Ingrese un numero decimal: ";
+    cin >> numFloat;
+    cout << "Ingrese otro numero decimal mas largo: ";
+    cin >> numDouble;
+    resultadoMultiplicacion = numFloat * numDouble;
+    cout << "Resultado de la multiplicacion: " << resultadoMultiplicacion << endl;
 
-    // Ejercicio 7
-    bool interruptor = true;
-    cout<<"7. Valor inicial del interruptor: "<<interruptor<<endl;
-    interruptor = !interruptor;
-    cout<<"7. Valor final del interruptor: "<<interruptor<<endl;
+    // ejercicio 7
+    bool valorBool = false;
+    cout << "Valor inicial del bool: " << valorBool << endl;
+    valorBool = !valorBool;
+    cout << "Nuevo valor del bool: " << valorBool << endl;
 
-    // Ejercicio 8
-    char letra1 = 'H', letra2 = 'i'; // Hi
-    string palabra = "";
-    palabra = palabra + letra1;
-    // palabra = "H"
-    palabra = palabra + letra2;
-    // palabra = "Hi"; => string
-    cout<<"8. Concatenación de char's: "<<palabra<<endl;
+    // ejercicio 8
+    char letra1='a', letra2='b';
+    cout << "Ingrese una letra: ";
+    cin >> letra1;
+    cout << "Ingrese otra letra: ";
+    cin >> letra2;
+    string concatenacion = string(1, letra1) + string(1, letra2);
+    cout << "Resultado de la concatenacion: " << concatenacion << endl;
+
+    // ejercicio 9
+    int numEntero1, numEntero2;
+    cout << "Ingrese el primer numero entero: ";
+    cin >> numEntero1;
+    cout << "Ingrese el segundo numero entero: ";
+    cin >> numEntero2;
+    if (numEntero1 > numEntero2) {
+        cout << numEntero1 << " es mayor que " << numEntero2 << endl;
+    } else if (numEntero2 > numEntero1) {
+        cout << numEntero2 << " es mayor que " << numEntero1 << endl;
+    }
+
+    // ejercicio 10
+    int fueraDelRango = 2147483650; 
+    cout << "Este numero esta fuera del rango: " << fueraDelRango << endl;
+
 
     return 0;
 }
 
 // Tipos de datos
-// 1. int => enteros
-// 2. float => decimales => 3.14
-// 3. char => caracteres => 'a', '1', '#'
-// 4. double => decimales con decimales => 3.14159265358979323846
-// 5. bool => booleanos => true, false
-// 6. string => cadenas de caracteres => "hola mundo"
-
-// precision(20) => cast
-
-// camelCase (la más usada)
-// snake_case
-// kebab-case
+// 1. int: para números enteros (sin decimales).
+// 2. float: para números decimales de precisión simple.
+// 3. double: para números decimales de precisión doble.
+// 4. char: para un solo carácter.
+// 5. bool: para valores booleanos (true o false).
+// 6. string: para cadenas de texto.
