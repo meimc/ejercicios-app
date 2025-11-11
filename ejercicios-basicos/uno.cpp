@@ -21,7 +21,7 @@ int main() {
     cout << "Tengo " << edad << " años" << endl;
 
     // ejercicio 2
-    float precio = 17.99;
+    float precio = 17.99f;
     cout << "El precio es " << precio << endl;
 
     // ejercicio 3
